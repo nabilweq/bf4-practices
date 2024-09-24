@@ -19,7 +19,6 @@ result = requests.get(url)
 
 if result.status_code == 200:
     doc = BeautifulSoup(result.text, "html.parser")
-
     price_tag = doc.find("div", class_="_30jeq3 _16Jk6d")
 
     if price_tag:
